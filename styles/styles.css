@@ -35,11 +35,19 @@
 }
 
 .sketch-area {
+  box-sizing: content-box;
   height: 600px;
   width: 600px;
   border: 2px solid #1095c1;
-  border-radius: 15px;
   background-color: #edf0f3;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  border: 1px solid rgba(16, 149, 193, 0.2);
+  width: 37.5px;
+  height: 37.5px;
 }
 
 .footer {
