@@ -15,18 +15,18 @@
       href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css"
     />
     <link rel="stylesheet" href="./styles/styles.css" />
-
     <title>Sketch</title>
+    <script defer src="./src/app.js"></script>
   </head>
   <body>
     <header class="header"><h1>Sketch!</h1></header>
     <main class="container">
       <section class="main-section">
         <div class="controls">
-          <span role="button" class="outline">Rainbow</span>
-          <span role="button" class="outline">Eraser</span>
-          <span role="button" class="outline">Clear</span>
-          <span role="button" class="outline">Grid Size</span>
+          <span role="button" class="outline dark-btn">Dark</span>
+          <span role="button" class="outline rainbow-btn">Rainbow</span>
+          <span role="button" class="outline eraser-btn">Eraser</span>
+          <span role="button" class="outline clear-btn">Clear</span>
         </div>
         <div class="sketch-area"></div>
       </section>
@@ -35,11 +35,6 @@
     <footer class="footer">
       <a href="https://github.com/leonardo-vic3nte" target="_blank">
         &copy; Leonardo Vicente
-        <img
-          class="github-icon"
-          src="./styles/images/github-mark-white.svg"
-          alt="github icon"
-        />
       </a>
     </footer>
   </body>
