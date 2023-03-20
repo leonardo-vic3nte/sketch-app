@@ -38,6 +38,16 @@ function activateBlack() {
   }
 }
 
+function activateEraser() {
+  const cells = document.querySelectorAll('.cell');
+
+  for (let i = 0; i < cells.length; i += 1) {
+    cells[i].addEventListener('mouseover', () => {
+      cells[i].style.backgroundColor = '#edf0f3';
+    });
+  }
+}
+
 function main() {
   fillSketchContainer();
 
@@ -46,6 +56,9 @@ function main() {
 
   const rainbowBtn = document.querySelector('.rainbow-btn');
   rainbowBtn.addEventListener('click', activateRainbow);
+
+  const eraserBtn = document.querySelector('.eraser-btn');
+  eraserBtn.addEventListener('click', activateEraser);
 }
 
 main();

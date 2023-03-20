@@ -45,6 +45,7 @@
   background-color: #edf0f3;
   display: flex;
   flex-wrap: wrap;
+  cursor: crosshair;
 }
 
 .cell {
