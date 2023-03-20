@@ -48,6 +48,14 @@ function activateEraser() {
   }
 }
 
+function clearAll() {
+  const cells = document.querySelectorAll('.cell');
+
+  for (let i = 0; i < cells.length; i += 1) {
+    cells[i].style.backgroundColor = '#edf0f3';
+  }
+}
+
 function main() {
   fillSketchContainer();
 
@@ -59,6 +67,9 @@ function main() {
 
   const eraserBtn = document.querySelector('.eraser-btn');
   eraserBtn.addEventListener('click', activateEraser);
+
+  const clearBtn = document.querySelector('.clear-btn');
+  clearBtn.addEventListener('click', clearAll);
 }
 
 main();
