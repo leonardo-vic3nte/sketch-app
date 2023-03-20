@@ -1,5 +1,6 @@
 .header {
   text-align: center;
+  padding-bottom: 0;
 }
 
 .header > h1 {
@@ -28,10 +29,12 @@
   border-radius: 30px;
   border: 2px solid #1095c1;
   color: #edf0f3;
+  transition: all 0.3s;
 }
 
 .controls > span:hover {
   background-color: #1095c1;
+  transition: all 0.3s;
 }
 
 .sketch-area {
@@ -46,8 +49,6 @@
 
 .cell {
   border: 1px solid rgba(16, 149, 193, 0.2);
-  width: 37.5px;
-  height: 37.5px;
 }
 
 .footer {
