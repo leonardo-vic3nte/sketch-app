@@ -15,8 +15,21 @@ function fillSketchContainer() {
   }
 }
 
+function activateBlack() {
+  const cells = document.querySelectorAll('.cell');
+
+  for (let i = 0; i < cells.length; i += 1) {
+    cells[i].addEventListener('mouseover', () => {
+      cells[i].style.backgroundColor = 'black';
+    });
+  }
+}
+
 function main() {
   fillSketchContainer();
+
+  const darkBtn = document.querySelector('.dark-btn');
+  darkBtn.addEventListener('click', activateBlack);
 }
 
 main();
