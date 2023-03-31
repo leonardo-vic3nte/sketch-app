@@ -52,6 +52,11 @@
   border: 1px solid rgba(16, 149, 193, 0.2);
 }
 
+fieldset > legend{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .footer {
   text-align: center;
 }

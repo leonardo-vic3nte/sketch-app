@@ -1,9 +1,9 @@
 /* eslint-disable no-use-before-define */
-function fillSketchContainer() {
+function fillSketchContainer(numCells) {
   // 600x600 Container 30x30 Cells //
 
-  const numberOfCells = 30 * 30;
-  const sizeEachCell = 600 / 30;
+  const numberOfCells = numCells * numCells;
+  const sizeEachCell = 600 / numCells;
   const container = document.querySelector('.sketch-area');
 
   for (let i = 0; i < numberOfCells; i += 1) {
@@ -56,8 +56,13 @@ function clearAll() {
   }
 }
 
+function clearGrid() {
+  const grid = document.querySelectorAll('.cell');
+  grid.forEach(element => element.remove());
+}
+
 function main() {
-  fillSketchContainer();
+  fillSketchContainer(30);
 
   const darkBtn = document.querySelector('.dark-btn');
   darkBtn.addEventListener('click', activateBlack);
@@ -70,6 +75,24 @@ function main() {
 
   const clearBtn = document.querySelector('.clear-btn');
   clearBtn.addEventListener('click', clearAll);
+
+  const smallBtn = document.querySelector('#small');
+  smallBtn.addEventListener('change', () => {
+    clearGrid();
+    fillSketchContainer(30);
+  });
+
+  const mediumBtn = document.querySelector('#medium');
+  mediumBtn.addEventListener('change', () => {
+    clearGrid();
+    fillSketchContainer(50);
+  });
+
+  const largeBtn = document.querySelector('#large');
+  largeBtn.addEventListener('change', () => {
+    clearGrid();
+    fillSketchContainer(100);
+  });
 }
 
 main();
