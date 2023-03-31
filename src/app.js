@@ -1,7 +1,6 @@
-/* eslint-disable no-use-before-define */
-function fillSketchContainer(numCells) {
-  // 600x600 Container 30x30 Cells //
 
+function fillSketchContainer(numCells) {
+  
   const numberOfCells = numCells * numCells;
   const sizeEachCell = 600 / numCells;
   const container = document.querySelector('.sketch-area');
